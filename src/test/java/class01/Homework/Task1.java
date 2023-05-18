@@ -28,24 +28,7 @@ Note: use name or id as locators
         driver.findElement(By.name("customer.password")).sendKeys("12345");
         driver.findElement(By.name("repeatedPassword")).sendKeys("12345");
 
-        String[] elementNames = {
-                "customer.firstName",
-                "customer.lastName",
-                "customer.address.street",
-                "customer.address.city",
-                "customer.address.state",
-                "customer.address.zipCode",
-                "customer.phoneNumber",
-                "customer.ssn",
-                "customer.username",
-                "customer.password",
-                "repeatedPassword"
-        };
 
-        for (String elementName : elementNames) {
-            String value = driver.findElement(By.name(elementName)).getAttribute("value");
-            System.out.println(elementName + ": " + value);
-        }
 
         driver.quit();
     }
