@@ -19,14 +19,14 @@ Note: use name or id as locators
         driver.findElement(By.name("customer.firstName")).sendKeys("Vicky");
         driver.findElement(By.name("customer.lastName")).sendKeys("Fredd");
         driver.findElement(By.name("customer.address.street")).sendKeys("my address is...");
-        driver.findElement(By.name("customer.address.city")).sendKeys("Valencia");
-        driver.findElement(By.name("customer.address.state")).sendKeys("Spain");
+        driver.findElement(By.name("customer.address.city")).sendKeys("Panama City");
+        driver.findElement(By.name("customer.address.state")).sendKeys("Florida");
         driver.findElement(By.name("customer.address.zipCode")).sendKeys("02002");
-        driver.findElement(By.name("customer.phoneNumber")).sendKeys("+3454678854");
-        driver.findElement(By.name("customer.ssn")).sendKeys("0123456789");
-        driver.findElement(By.name("customer.username")).sendKeys("Alex.Rash");
-        driver.findElement(By.name("customer.password")).sendKeys("123456789");
-        driver.findElement(By.name("repeatedPassword")).sendKeys("123456789");
+        driver.findElement(By.name("customer.phoneNumber")).sendKeys("+8501257854");
+        driver.findElement(By.name("customer.ssn")).sendKeys("01234");
+        driver.findElement(By.name("customer.username")).sendKeys("Vicky.Fredd");
+        driver.findElement(By.name("customer.password")).sendKeys("12345");
+        driver.findElement(By.name("repeatedPassword")).sendKeys("12345");
 
         String[] elementNames = {
                 "customer.firstName",
