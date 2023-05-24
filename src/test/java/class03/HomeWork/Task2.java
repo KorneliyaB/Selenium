@@ -21,8 +21,18 @@ Verify error message with text “Password cannot be empty” is displayed.
 
         WebElement userName=driver.findElement(By.cssSelector("input[id='txtUsername']"));
         userName.sendKeys("Admin");
+        Thread.sleep(2000);
         WebElement login=driver.findElement(By.xpath("//input[@name='Submit']"));
         login.click();
+        WebElement errorMessage=driver.findElement(By.cssSelector("span[id='spanMessage']"));
+        String message=errorMessage.getText();
+        System.out.println(message);
+
+       /* if(message.equals("Password cannot be empty")){
+            System.out.println("Error message is displayed");
+        }else{
+            System.out.println("Error message is not displayed");
+       */
         Thread.sleep(3000);
         driver.close();
 
