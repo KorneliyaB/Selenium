@@ -33,6 +33,7 @@ fill in the complete form
         WebElement state=driver.findElement(By.cssSelector("select[name='state']"));
         state.click();
         state.sendKeys("Florida");
+        state.click();
         WebElement zipC=driver.findElement(By.cssSelector("input[name='zip']"));
         zipC.sendKeys("32407");
         WebElement website=driver.findElement(By.cssSelector("input[placeholder^= 'Website or d']"));
