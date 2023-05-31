@@ -33,7 +33,7 @@ public class Frames {
         WebElement textBox=driver.findElement(By.xpath("//input"));
         textBox.sendKeys("abracadabra");
 
-        //click on the check box
+        //click on the checkbox
         //switch to iframe
         WebElement frame3=driver.findElement(By.xpath("//iframe[@id='frame3']"));
         driver.switchTo().frame(frame3);
