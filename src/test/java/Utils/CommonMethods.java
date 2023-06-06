@@ -1,6 +1,7 @@
 package Utils;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -25,5 +26,10 @@ public class CommonMethods {
         if (driver!=null){
             driver.quit();
         }
+    }
+
+    public static void sendText(String text, WebElement element){
+        element.clear();
+        element.sendKeys(text);
     }
 }
