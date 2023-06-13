@@ -1,6 +1,36 @@
 package class07.Homework;
 
-public class Task1 {
+import Utils.CommonMethods;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+
+public class Task1 extends CommonMethods {
+    public static void main(String[] args) {
+        String url = "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login";
+        String browser = "chrome";
+        openBrowserAndLaunchApp(url, browser);
+        WebElement userName= driver.findElement(By.xpath("//input[@id='txtUsername']"));
+        userName.sendKeys("Admin");
+        WebElement password=driver.findElement(By.xpath("//input[@id='txtPassword']"));
+        password.sendKeys("Hum@nhrm123");
+        WebElement loginBtn=driver.findElement(By.xpath("//input[@id='btnLogin']"));
+        loginBtn.click();
+        WebElement pimBtn=driver.findElement(By.xpath("//a[@id='menu_pim_viewPimModule']"));
+        pimBtn.click();
+        List<WebElement> tableRows = driver.findElements(By.xpath("//*[@id='resultTable']/tbody/tr/td[2]"));
+
+
+        for (int i = 0; i < tableRows.size(); i++) {
+            var textElement = tableRows.get(i).getText();
+            if (textElement.equals("53695A")) {
+                System.out.println("The row number is " + (i + 1));
+                System.out.println(textElement);
+
+    }
+}
+    }
 }
 /*
  HW:
